@@ -116,3 +116,17 @@ ERROR - 2015-07-17 02:55:42 --> Fatal Error - Method name must be a string in /U
 ERROR - 2015-07-17 02:57:21 --> Fatal Error - Method name must be a string in /Users/csang/Sites/ashaffer/fuel/core/classes/presenter.php on line 316
 ERROR - 2015-07-17 02:57:30 --> Fatal Error - Method name must be a string in /Users/csang/Sites/ashaffer/fuel/core/classes/presenter.php on line 316
 ERROR - 2015-07-17 19:10:44 --> Fatal Error - Method name must be a string in /Users/csang/Sites/ashaffer/fuel/core/classes/presenter.php on line 316
+ERROR - 2015-07-17 22:19:43 --> Fatal Error - Method name must be a string in /Users/csang/Sites/ashaffer/fuel/core/classes/presenter.php on line 316
+ERROR - 2015-07-17 22:20:11 --> Fatal Error - Method name must be a string in /Users/csang/Sites/ashaffer/fuel/core/classes/presenter.php on line 316
+ERROR - 2015-07-17 22:23:44 --> Fatal Error - Method name must be a string in /Users/csang/Sites/ashaffer/fuel/core/classes/presenter.php on line 316
+ERROR - 2015-07-17 22:24:24 --> Fatal Error - Method name must be a string in /Users/csang/Sites/ashaffer/fuel/core/classes/presenter.php on line 316
+ERROR - 2015-07-17 22:25:26 --> Fatal Error - Method name must be a string in /Users/csang/Sites/ashaffer/fuel/core/classes/presenter.php on line 316
+ERROR - 2015-07-17 22:29:55 --> Fatal Error - Method name must be a string in /Users/csang/Sites/ashaffer/fuel/core/classes/presenter.php on line 316
+ERROR - 2015-07-17 22:30:22 --> Fatal Error - Method name must be a string in /Users/csang/Sites/ashaffer/fuel/core/classes/presenter.php on line 316
+ERROR - 2015-07-17 22:30:30 --> Fatal Error - Method name must be a string in /Users/csang/Sites/ashaffer/fuel/core/classes/presenter.php on line 316
+ERROR - 2015-07-17 22:30:51 --> Fatal Error - Method name must be a string in /Users/csang/Sites/ashaffer/fuel/core/classes/presenter.php on line 316
+ERROR - 2015-07-17 22:35:59 --> Fatal Error - Method name must be a string in /Users/csang/Sites/ashaffer/fuel/core/classes/presenter.php on line 316
+ERROR - 2015-07-17 22:37:07 --> Fatal Error - Method name must be a string in /Users/csang/Sites/ashaffer/fuel/core/classes/presenter.php on line 316
+ERROR - 2015-07-17 23:56:15 --> Fatal Error - Method name must be a string in /Users/csang/Sites/ashaffer/fuel/core/classes/presenter.php on line 316
+ERROR - 2015-07-17 23:58:32 --> Fatal Error - Method name must be a string in /Users/csang/Sites/ashaffer/fuel/core/classes/presenter.php on line 316
+ERROR - 2015-07-17 23:59:18 --> Fatal Error - Method name must be a string in /Users/csang/Sites/ashaffer/fuel/core/classes/presenter.php on line 316

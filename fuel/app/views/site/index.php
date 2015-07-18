@@ -1,3 +1,4 @@
+<div class="burger_icon white"></div>
 <div id="home">
 	<div class="segments">
 		<div class="segment disciplines">
@@ -26,26 +27,32 @@
 				<div class="service">
 					<div class="icon"></div>
 					<h3>Website &amp; App Design</h3>
-					<p>The design is crafted around the pulse of the company.  </p>
+					<p>The design is crafted around the pulse of the company.</p>
 				</div
 				><div class="service">
 					<div class="icon"></div>
 					<h3>Mobile Site &amp; App Design</h3>
-					<p>The design is crafted around the pulse of the company.  </p>
+					<p>The design is crafted around the pulse of the company.</p>
 				</div>
 			</div>
 		</div>
 		<div class="segment portfolio">
 			<h2><span>Portfolio</span></h2>
 			<div id="portfolio">
-				<?php foreach ($portfolio_pieces as $piece => $name) : ?>
-					<div>
-						<div class="project">
-							<h3>Project: <?= $name ?></h3>
-							<button>Visit Site</button>
+				<?php foreach ($portfolio_pieces as $piece => $data) : ?>
+					<div class="piece">
+						<div class="arrow left_arrow">
 						</div>
-						<div class="screenshot">
-							<img src="<?= Uri::create("assets/img/portfolio/{$piece}/screenshot_1.png") ?>">
+						<div class="project_container">
+							<div class="project">
+								<h3>Project: <?= $data->name ?></h3>
+								<?= Html::anchor($data->url, '<button>Visit Site</button>') ?>
+							</div>
+							<div class="screenshot">
+								<img src="<?= Uri::create("assets/img/portfolio/{$piece}/screenshot_1.png") ?>">
+							</div>
+						</div>
+						<div class="arrow right_arrow">
 						</div>
 					</div>
 				<?php endforeach; ?>

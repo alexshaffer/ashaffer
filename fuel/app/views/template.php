@@ -30,7 +30,6 @@
         <?= Casset::render_js() ?>
     </head
     ><body>
-        <div class="burger_icon"></div>
         <?= isset($nav) ? $nav : null ?>
         <?= isset($header) ? $header : null ?>
         <div id="content">

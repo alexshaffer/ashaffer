@@ -8,8 +8,13 @@ class Controller_Site extends Controller_Assets
 
 		if (! Input::is_ajax())
 		{
-			// $this->_init_assets();
+			$this->_init_nav();
 		}
+	}
+
+	private function _init_nav()
+	{
+		$this->template->nav = View::forge('template/nav');
 	}
 
 	/**
@@ -19,7 +24,7 @@ class Controller_Site extends Controller_Assets
 	 */
 	public function action_index()
 	{
-		$portfolio_pieces = array('texting_base' => 'Texting Base','lmb_law_firm' => 'LMB Law Firm','equistar' => 'Equistar Wealth Management');
+		$portfolio_pieces = array('texting_base' => (object) array('name' => 'Texting Base', 'url' => 'http://textingbase.com'),'lmb_law_firm' => (object) array('name' => 'LMB Law Firm', 'url' => 'http://lmblawfirm.com'),'equistar' => (object) array('name' => 'Equistar Wealth Management', 'url' => 'http://equistar.com'));
 
 		$this->template->header = View::forge('site/header');
 
@@ -29,14 +34,24 @@ class Controller_Site extends Controller_Assets
 	}
 
 	/**
+	 * About page
+	 *
+	 * @access  public
+	 */
+	public function action_about()
+	{
+		// $this->template->header = View::forge('site/header');
+
+		$this->template->content = View::forge('site/about');
+	}
+
+	/**
 	 * The 404 action for the application.
 	 *
 	 * @access  public
-	 * @return  Response
 	 */
 	public function action_404()
 	{
-		$this->template->content = Presenter::forge('welcome/404', 404);
-		// return Response::forge(Presenter::forge('welcome/404'), 404);
+		$this->template->content = View::forge('site/404');
 	}
 }
