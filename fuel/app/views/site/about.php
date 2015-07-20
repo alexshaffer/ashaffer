@@ -6,7 +6,7 @@
 	</div>
 </header>
 <div id="about">
-	<div class="segment">
+	<div class="segment about_me">
 		<h2><span>About Me</span></h2>
 		<p>I’m Alex Shaffer, UI/UX Designer with 7 years of experience. I’m passionate about design, human interaction and identifying solutions to complex problems. I’m absolutely in love with technology and have been working with computers since was in elementary school. I’m a relentless entrepreuner who co-owns a few start ups (Texting Base &amp; Appuix).  When I’m not pushing pixels you’ll find me: riding my bike, playing with dog or playing Madden. I am a huge Indianapolis Colts and Indiana Pacers fan!</p>
 	</div>

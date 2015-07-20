@@ -28,11 +28,13 @@ a{
 
 .burger_icon.white{
 	background-color: #000;
+	background-color: rgba(0,0,0,.9);
 	padding: 20px 10px 0;
 }
 
 .burger_icon.black{
 	background-color: #fff;
+	background-color: rgba(255,255,255,.9);
 	padding: 20px 10px 0;
 }
 
@@ -324,6 +326,7 @@ nav ul li:hover{
 
 #home #portfolio .piece .arrow.left_arrow{
 	left: 5px;
+	display: none;
 }
 
 #home #portfolio .piece .arrow.right_arrow{
@@ -410,6 +413,10 @@ nav ul li:hover{
 	font-weight: normal;
 }
 
+#about .about_me p{
+	line-height: 32px;
+}
+
 #about h3, #about h4, #about h5{
 	margin: 0;
 	padding: 0;
@@ -423,6 +430,11 @@ nav ul li:hover{
 #about h5{
 	font-weight: normal;
 	font-size: 18px;
+}
+
+#about a{
+	text-decoration: underline;
+	color: #000;
 }
 
 #about .experience p{

@@ -24,7 +24,23 @@ class Controller_Site extends Controller_Assets
 	 */
 	public function action_index()
 	{
-		$portfolio_pieces = array('texting_base' => (object) array('name' => 'Texting Base', 'url' => 'http://textingbase.com'),'lmb_law_firm' => (object) array('name' => 'LMB Law Firm', 'url' => 'http://lmblawfirm.com'),'equistar' => (object) array('name' => 'Equistar Wealth Management', 'url' => 'http://equistar.com'));
+		$portfolio_pieces = array(
+			'Texting Base' => (object) array(
+				'img' => 'texting_base', 
+				'url' => 'http://textingbase.com',
+				'total_imgs' => 1
+				),
+			'LMB Law Firm' => (object) array(
+				'img' => 'lmb_law_firm', 
+				'url' => 'http://lmblawfirm.com',
+				'total_imgs' => 4
+				),
+			'Equistar Wealth Management' => (object) array(
+				'img' => 'equistar', 
+				'url' => 'http://equistar.com',
+				'total_imgs' => 2
+				)
+			);
 
 		$this->template->header = View::forge('site/header');
 

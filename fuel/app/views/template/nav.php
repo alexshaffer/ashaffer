@@ -7,6 +7,6 @@
 		<?= Html::anchor('portfolio', '<li>PORTFOLIO</li>'); ?>
 		<?= Html::anchor('about', '<li>ABOUT</li>'); ?>
 		<?= Html::anchor('contact', '<li>CONTACT</li>'); ?>
-		<?= Html::anchor('http://linkedin.com/in/ashaffer', '<li>LINKEDIN</li>'); ?>
+		<?= Html::anchor('http://linkedin.com/in/alexshaffer', '<li>LINKEDIN</li>', array('target' => '_blank')); ?>
 	</ul>
 </nav>

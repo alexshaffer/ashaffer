@@ -43,16 +43,16 @@
 					<div class="piece">
 						<div class="arrow left_arrow">
 						</div>
-						<div class="project_container">
+						<div class="project_container" data-total="<?= $data->total_imgs ?>">
 							<div class="project">
-								<h3>Project: <?= $data->name ?></h3>
+								<h3>Project: <?= $piece ?></h3>
 								<?= Html::anchor($data->url, '<button>Visit Site</button>') ?>
 							</div>
 							<div class="screenshot">
-								<img src="<?= Uri::create("assets/img/portfolio/{$piece}/screenshot_1.png") ?>">
+								<img src="<?= Uri::create("assets/img/portfolio/{$data->img}/screenshot_1.png") ?>">
 							</div>
 						</div>
-						<div class="arrow right_arrow">
+						<div class="arrow right_arrow" <?= $data->total_imgs == 1 ? 'style="display:none;"' : null ?>>
 						</div>
 					</div>
 				<?php endforeach; ?>
