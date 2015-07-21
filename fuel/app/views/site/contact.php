@@ -19,11 +19,11 @@
 		</div
 		><div class="input number">
 			<label>Phone Number:</label>
-			<input type="text" maxlength="3"><input type="text" maxlength="3"><input type="text" maxlength="4">
+			<input type="text" maxlength="3" name="mobile[]"><input type="text" maxlength="3" name="mobile[]"><input type="text" maxlength="4" name="mobile[]">
 		</div>
 		<div class="textarea">
 			<label>Message:</label>
-			<textarea></textarea>
+			<textarea name="message"></textarea>
 		</div>
 		<button class="white">Send</button>
 	</div>

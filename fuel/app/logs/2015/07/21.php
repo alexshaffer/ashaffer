@@ -11,3 +11,6 @@ ERROR - 2015-07-21 00:24:22 --> Parsing Error - syntax error, unexpected '}', ex
 ERROR - 2015-07-21 00:24:45 --> Parsing Error - syntax error, unexpected 'screenshot_1' (T_STRING), expecting '}' in /Users/csang/Sites/ashaffer/fuel/app/views/site/portfolio.php on line 19
 ERROR - 2015-07-21 00:25:39 --> Notice - Trying to get property of non-object in /Users/csang/Sites/ashaffer/fuel/app/views/site/portfolio.php on line 29
 ERROR - 2015-07-21 00:28:50 --> Warning - Invalid argument supplied for foreach() in /Users/csang/Sites/ashaffer/fuel/app/views/site/portfolio.php on line 25
+ERROR - 2015-07-21 02:54:32 --> Fatal Error - Call to undefined method Controller_Ajax_Main::post_data() in /Users/csang/Sites/ashaffer/fuel/app/classes/controller/ajax/main.php on line 7
+ERROR - 2015-07-21 02:57:18 --> Fatal Error - Class 'Model_Input' not found in /Users/csang/Sites/ashaffer/fuel/app/classes/controller/assets.php on line 49
+ERROR - 2015-07-21 02:58:47 --> Fatal Error - Class 'Model_Input' not found in /Users/csang/Sites/ashaffer/fuel/app/classes/controller/assets.php on line 49

@@ -1,3 +1,48 @@
+Main_Url = {
+	url: function(url)
+	{
+		var host_segments = window.location.hostname.split('.');
+		if(host_segments.length == 4)
+		{
+			var local = true;
+			for (var i = host_segments.length - 1; i >= 0; i--) {
+				if(isNaN(host_segments[i])){
+					local = false;
+				}
+			};
+			if(local){
+				return 'http://'+window.location.hostname+'/ashaffer/public/' + url;
+			}else{
+				return window.location.origin + '/' + url;
+			}
+		}
+		else
+		{
+			return window.location.origin + '/' + url;
+		}
+	},
+};
+
+Main_Ajax = {
+	send_message: function(attr)
+	{
+		$.ajax({
+			type: 'POST',
+			url: Main_Url.url('ajax_main/send_message'),
+			data_Type: 'json',
+			data: {
+				first_name: attr.first_name,
+				last_name: attr.last_name,
+				email: attr.email,
+				mobile: attr.mobile,
+				message: attr.message,
+			},
+			success: attr.success,
+			error: attr.error
+		});
+	},
+};
+
 Main = {
 
 	toggle_nav: function(e){
@@ -72,12 +117,33 @@ Main = {
 		$('.close_contact').show();
 	},
 
+	send_message: function(e){
+		var mobile_input = $('input[name="mobile[]"]'),
+			mobile = "(" + $(mobile_input[0]).val() + ") " + $(mobile_input[1]).val() + "-" + $(mobile_input[2]).val();
+		Main_Ajax.send_message({
+			first_name: $('input[name="first_name"]').val(),
+			last_name: $('input[name="last_name"]').val(),
+			email: $('input[name="email"]').val(),
+			mobile: mobile,
+			message: $('textarea[name="message"]').val(),
+			success: function(data){
+
+			},
+			error: function(data){
+
+			}
+		})
+		console.log(mobile);
+	},
+
 	init: function(){
 		$('.burger_icon, .close_nav, nav a').click(this.toggle_nav);
 		$('nav .contact, button.contact').click(this.show_contact);
 		$('.close_contact').click(this.close_contact);
 		$('#home #portfolio .piece .arrow.left_arrow').click(this.prev_portfolio_img);
 		$('#home #portfolio .piece .arrow.right_arrow').click(this.next_portfolio_img);
+
+		$('#contact button').click(this.send_message);
 	}
 }
 

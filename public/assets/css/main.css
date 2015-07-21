@@ -545,6 +545,7 @@ nav ul li:hover{
 	padding: 10px 1%;
 	width: 27%;
 	width: calc(29.3% - 6px);
+	text-align: center;
 }
 
 #contact .textarea{

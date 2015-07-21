@@ -8,6 +8,10 @@ return array(
 	'about' => 'site/about',
 	'contact' => 'site/contact',
 
+	// Ajax Calls
+
+	'ajax_main/send_message' => 'ajax_main/send_message',
+
 	'(:any)' => 'site/404',
 
 );

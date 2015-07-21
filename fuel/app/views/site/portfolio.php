@@ -44,6 +44,6 @@
 	</div>
 	<div class="contact_me">
 		<h2>Have a great idea or project? Lets Chat!</h2>
-		<?= Html::anchor('contact', '<button class="contact">Contact Me</button>') ?>
+		<?= Html::anchor('#contact', '<button class="contact">Contact Me</button>') ?>
 	</div>
 </div>
