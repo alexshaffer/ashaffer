@@ -8,7 +8,13 @@ Main = {
 			}, 500, function(){
 				nav.hide();
 			});
+			$('.burger_icon').animate({
+				opacity: 1
+			},500);
 		}else{
+			$('.burger_icon').animate({
+				opacity: 0
+			},500);
 			nav.show().animate({
 				opacity: 1
 			}, 500);
@@ -56,8 +62,20 @@ Main = {
 
 	},
 
+	close_contact: function(e){
+		$('#contact').css('top','-100%');
+		$('.close_contact').hide();
+	},
+
+	show_contact: function(e){
+		$('#contact').css('top','0');
+		$('.close_contact').show();
+	},
+
 	init: function(){
 		$('.burger_icon, .close_nav, nav a').click(this.toggle_nav);
+		$('nav .contact, button.contact').click(this.show_contact);
+		$('.close_contact').click(this.close_contact);
 		$('#home #portfolio .piece .arrow.left_arrow').click(this.prev_portfolio_img);
 		$('#home #portfolio .piece .arrow.right_arrow').click(this.next_portfolio_img);
 	}

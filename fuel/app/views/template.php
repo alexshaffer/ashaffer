@@ -33,7 +33,8 @@
         <?= isset($nav) ? $nav : null ?>
         <?= isset($header) ? $header : null ?>
         <div id="content">
-    		  <?= isset($content) ? $content : null ?>
+            <?= isset($contact) ? $contact : null ?>
+            <?= isset($content) ? $content : null ?>
         </div>
 		<?= isset($footer) ? $footer : null ?>
     </body
