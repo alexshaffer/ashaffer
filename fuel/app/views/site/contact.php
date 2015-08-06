@@ -1,7 +1,7 @@
 <div id="contact">
 	<div class="close_contact"></div>
-	<header class="main">
-		<img src="<?= Uri::create('assets/img/logo_white.png') ?>">
+	<header class="contact">
+		<?= Html::anchor('/', Asset::img('logo_white.svg', array('onerror' => 'logo_white.png', 'id' => 'logo'))); ?>
 	</header>
 	<h2><span>Contact Me</span></h2>
 	<div class="form">
@@ -19,7 +19,9 @@
 		</div
 		><div class="input number">
 			<label>Phone Number:</label>
-			<input type="text" maxlength="3" name="mobile[]"><input type="text" maxlength="3" name="mobile[]"><input type="text" maxlength="4" name="mobile[]">
+			<div class="mobile_input">
+				<span>(</span><input type="text" maxlength="3" name="mobile[]" placeholder="###"><span>)</span><input type="text" maxlength="3" name="mobile[]" placeholder="###"><span>-</span><input type="text" maxlength="4" name="mobile[]" placeholder="####">
+			</div>
 		</div>
 		<div class="textarea">
 			<label>Message:</label>

@@ -40,6 +40,7 @@ class Controller_Site extends Controller_Assets
 			$portfolio_pieces[$data->name] = $object[$data->name];
 		};
 
+		$this->template->index = true;
 		$this->template->header = View::forge('site/header');
 
 		$this->template->contact = View::forge('site/contact');

@@ -108,13 +108,60 @@ Main = {
 	},
 
 	close_contact: function(e){
-		$('#contact').css('top','-100%');
+		$('#contact').css({
+			'top': '-100%',
+			'height': '0px'
+		});
 		$('.close_contact').hide();
 	},
 
 	show_contact: function(e){
-		$('#contact').css('top','0');
+		$('#contact').css({
+			'top': '0',
+			'height': '100%'
+		});
 		$('.close_contact').show();
+		var nav = $('nav');
+		if(nav.is(':visible')){
+			Main.toggle_nav();
+		}
+	},
+
+	focus_mobile_input: function(e){
+		input = [2,1,0];
+		focused = false;
+		for (var i = input.length - 1; i >= 0; i--) {
+			input[i]
+			var self = $($('#contact .mobile_input input')[i]);
+			if(self.attr('maxlength') != self.val().length){
+				self.focus();
+				focused = true;
+			}
+		};
+		if(!focused){
+			$($('#contact .mobile_input input')[2]).focus()
+		}
+	},
+
+	check_character: function(e){
+		if((e.keyCode < 48 || e.keyCode > 57) && (e.keyCode < 96 || e.keyCode > 105) && (e.keyCode != 8 && e.keyCode != 9 && e.keyCode != 37 && e.keyCode != 39 && e.keyCode != 46)){
+			return false;
+		}
+	},
+
+	check_character_count: function(e){
+		var self = $(this);
+		if(e.keyCode == 37 || e.keyCode == 39){
+			return false;
+		}else{
+			if(self.attr('maxlength') == self.val().length){
+				if(self.attr('maxlength') == 4){
+					$('#contact textarea').focus();
+				}else{
+					self.next().next().focus();
+				}
+			}
+		}
 	},
 
 	send_message: function(e){
@@ -127,13 +174,33 @@ Main = {
 			mobile: mobile,
 			message: $('textarea[name="message"]').val(),
 			success: function(data){
-
+				if(data){
+					Main.close_contact();
+					Main.notification('Message Sent','success');
+				}else{
+					Main.notification('Message could not be Sent','error');
+				}
 			},
 			error: function(data){
-
+				Main.notification('Message could not be Sent','error');
 			}
 		})
-		console.log(mobile);
+	},
+
+	notification: function(message, status){
+		$('body .notification').remove();
+		var html = '<div class="notification '+status+'"><p>'+message+'</p></div>'
+		$('body').append(html);
+		$('body .notification').animate({
+			opacity: 1
+		}, 3000, function(){
+			$('body .notification').animate({
+				opacity: 0,
+				height: 0
+			}, 500, function(){
+				$('body .notification').remove();
+			});
+		})
 	},
 
 	init: function(){
@@ -143,6 +210,10 @@ Main = {
 		$('#home #portfolio .piece .arrow.left_arrow').click(this.prev_portfolio_img);
 		$('#home #portfolio .piece .arrow.right_arrow').click(this.next_portfolio_img);
 
+		$('#contact .mobile_input input').click(function(e){return false;});
+		$('#contact .mobile_input input').keydown(this.check_character);
+		$('#contact .mobile_input input').keyup(this.check_character_count);
+		$('#contact .mobile_input').click(this.focus_mobile_input);
 		$('#contact button').click(this.send_message);
 	}
 }

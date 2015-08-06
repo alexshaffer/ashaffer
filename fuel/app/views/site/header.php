@@ -1,9 +1,9 @@
 <header class="main">
-	<img src="<?= Uri::create('assets/img/logo_white.png') ?>">
+	<?= Html::anchor('/', Asset::img('logo_white.svg', array('onerror' => 'logo_white.png', 'id' => 'logo'))); ?>
 	<div class="cta">
 		<h1>I craft <select>
+			<option>Usable</option>
 			<option>Consistent</option>
-			<option>USABLE</option>
 			<option>Simple</option>
 			<option>Clean</option>
 			<option>Powerful</option>

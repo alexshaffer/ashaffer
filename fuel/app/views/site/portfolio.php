@@ -1,6 +1,6 @@
 <div class="burger_icon black"></div>
-<header class="about">
-	<img src="<?= Uri::create('assets/img/logo_black.png') ?>">
+<header class="portfolio">
+	<?= Html::anchor('/', Asset::img('logo_black.svg', array('onerror' => 'logo_black.png', 'id' => 'logo'))); ?>
 </header>
 <div id="home">
 	<div class="segments">
@@ -12,7 +12,7 @@
 					</div>
 					<div class="project_container" data-total="<?= $portfolio_pieces[$primary_piece]->total_imgs ?>">
 						<div class="project">
-							<h3>Project: <?= $primary_piece ?></h3>
+							<h3 title="<?= $primary_piece ?>">Project: <?= $primary_piece ?></h3>
 							<?= $portfolio_pieces[$primary_piece]->url ? Html::anchor($portfolio_pieces[$primary_piece]->url, '<button>Visit Site</button>') : '<span class="development">In Development *</span>' ?>
 						</div>
 						<div class="screenshot">
@@ -28,7 +28,7 @@
 						</div>
 						<div class="project_container" data-total="<?= $data->total_imgs ?>">
 							<div class="project">
-								<h3>Project: <?= $piece ?></h3>
+								<h3 title="<?= $piece ?>">Project: <?= $piece ?></h3>
 								<?= $data->url ? Html::anchor($data->url, '<button>Visit Site</button>') : '<span class="development">In Development *</span>' ?>
 							</div>
 							<div class="screenshot">
@@ -43,7 +43,7 @@
 		</div>
 	</div>
 	<div class="contact_me">
-		<h2>Have a great idea or project? Lets Chat!</h2>
-		<?= Html::anchor('#contact', '<button class="contact">Contact Me</button>') ?>
+		<h2>Have a great idea or project? Let's Chat!</h2>
+		<button class="contact">Contact Me</button>
 	</div>
 </div>

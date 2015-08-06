@@ -9,9 +9,9 @@ return array(
 	'contact' => 'site/contact',
 
 	// Ajax Calls
-
 	'ajax_main/send_message' => 'ajax_main/send_message',
 
+	// 404
 	'(:any)' => 'site/404',
-
+	'(:any)/(:segment)' => 'site/404',
 );
